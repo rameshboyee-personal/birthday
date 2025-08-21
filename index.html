@@ -19,6 +19,10 @@
 </head>
 
 <body>
+    <audio id="bg-music" autoplay loop muted>
+  <source src="Parichayamila_bgm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
     <div id="wrapper">
         <div class="flag__birthday">
             <img src="./images/1.png" alt="" width="350" class="flag__left">
@@ -250,6 +254,20 @@
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
     })
+
+    window.addEventListener("load", () => {
+  let bgMusic = document.getElementById("bg-music");
+  
+  // Try to unmute & play automatically
+  bgMusic.muted = false;
+  bgMusic.play().catch(() => {
+    // If autoplay blocked, wait for first user click
+    document.body.addEventListener("click", () => {
+      bgMusic.muted = false;
+      bgMusic.play();
+    }, { once: true });
+  });
+});
 </script>
 
 </html>
