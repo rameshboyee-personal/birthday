@@ -226,7 +226,8 @@ body {
 .name{
     position: absolute;
     padding: 0px 20px;
-    bottom: -20px;
+    bottom: -35px;
+    left:40px;
     border: 3px solid var(--color-black);
     font-family: 'Dancing Script', cursive;
 }
@@ -253,8 +254,8 @@ body {
 .content .right .image{
     position: relative;
     width: 400px;
-    height: 400px;
-    border-radius: 50%;
+    height: 600px;
+    border-radius: 25%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -291,15 +292,15 @@ body {
 
 }
 .text__cricle{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-color: var(--color-text-pink);
     border-radius: 50%;
     border: 5px solid var(--color-black);
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: rotateCricle 5s linear infinite;
+    animation: rotateCricle 10s linear infinite;
 }
 @keyframes rotateCricle{
     to{
@@ -312,10 +313,11 @@ body {
     position: absolute;
     color: var(--color-black);
     transform: rotate(calc(var(--i) * 24deg));
-    transform-origin: 0 45px;
+    transform-origin: 0 70px;
     font-family: "Sriracha", cursive;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-weight:bold;
+    font-size: 1rem;
 }
 .fa-heart{
     color: var(--color-heart);
@@ -333,8 +335,8 @@ body {
 }
 .right .balloon_one{
     position: absolute;
-    top: -70px;
-    left: -70px;
+    top: -60px;
+    left: -80px;
     animation: balloon1 2s infinite linear;
 }
 @keyframes balloon1{
@@ -354,7 +356,7 @@ body {
 .right .balloon_two{
     position: absolute;
     top: 170px;
-    right: -65px;
+    right: -90px;
     z-index: -1;
     transform: rotate(10deg);
     animation: balloon2 2s infinite linear;
@@ -506,7 +508,7 @@ body {
     font-size: 2.4rem;
 }
 .title__letter .fa-solid{
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 1.3rem;
 }
 .letter__border .letter .content__letter{
@@ -787,7 +789,9 @@ body {
         position: absolute;
         top: 10px;
         left: -77px;
-        animation: balloon1 2s infinite linear;
+        z-index: -1;
+        transform: rotate(10deg);
+        animation: balloon2 2s infinite linear;
     }
 
     .right .balloon_one img{
@@ -869,20 +873,24 @@ body {
     transform-origin: left;
     transition: all 1s ease-in-out;
 }
+
 .boxMail .boxMail-container .card1 .userImg{
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     background-color: white;
     border-radius: 50%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
     border: 2px solid white;
     cursor: pointer;
     margin-bottom: 20px;
 }
+
 .boxMail .boxMail-container .card1 .userImg img{
     position: absolute;
-    object-fit: cover;
+    object-fit: fill;
     width: calc(100%);
     height: calc(100%);
 }
@@ -890,13 +898,14 @@ body {
     font-family: 'Dancing Script', cursive;
     font-size: 40px;
     text-transform: uppercase;
-    width: 80%;
+    padding-top: 20px;
+    width: 100%;
     text-align: center;
     line-height: 1.5;
     letter-spacing: 5px;
     transform: rotate(-5deg);
-    text-shadow: 0 0 5px white,
-                0 0 10px white;
+    text-shadow: 0 0 5px rgb(26, 15, 15),
+                0 0 10px rgb(8, 7, 7);
 }
 .boxMail .boxMail-container .card2{
     position: relative;
